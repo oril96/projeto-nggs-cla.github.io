@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Service</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0000FF, #00FF00);
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .carousel-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .carousel {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 10px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel-card img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos para o botão */
+        /*#nextButton {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #nextButton:hover {
+            background-color: #0056b3;
+        }*/
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to StreamNow NGGS Streaming</h1>
+    </header>
+    <main>
+        <h2>Available Titles</h2>
+        <div class="carousel-container">
+            <!-- Carrossel 1 -->
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-card"><img src="/static/img/title1.jpg" alt="Title 1"></div>
+                    <div class="carousel-card"><img src="/static/img/title2.jpg" alt="Title 2"></div>
+                    <div class="carousel-card"><img src="/static/img/title3.jpg" alt="Title 3"></div>
+                    <div class="carousel-card"><img src="/static/img/title4.jpg" alt="Title 4"></div>
+                    <div class="carousel-card"><img src="/static/img/title5.jpg" alt="Title 5"></div>
+                    <div class="carousel-card"><img src="/static/img/title6.jpg" alt="Title 6"></div>
+                    <div class="carousel-card"><img src="/static/img/title7.jpg" alt="Title 7"></div>
+                    <div class="carousel-card"><img src="/static/img/title8.jpg" alt="Title 8"></div>
+                    <div class="carousel-card"><img src="/static/img/title9.jpg" alt="Title 9"></div>
+                    <div class="carousel-card"><img src="/static/img/title10.jpg" alt="Title 10"></div>
+                    <div class="carousel-card"><img src="/static/img/title1.jpg" alt="Title 1"></div>
+                    <div class="carousel-card"><img src="/static/img/title2.jpg" alt="Title 2"></div>
+                    <div class="carousel-card"><img src="/static/img/title3.jpg" alt="Title 3"></div>
+                    <div class="carousel-card"><img src="/static/img/title4.jpg" alt="Title 4"></div>
+                    <div class="carousel-card"><img src="/static/img/title5.jpg" alt="Title 5"></div>
+                    <div class="carousel-card"><img src="/static/img/title6.jpg" alt="Title 6"></div>
+                    <div class="carousel-card"><img src="/static/img/title7.jpg" alt="Title 7"></div>
+                    <div class="carousel-card"><img src="/static/img/title8.jpg" alt="Title 8"></div>
+                    <div class="carousel-card"><img src="/static/img/title9.jpg" alt="Title 9"></div>
+                    <div class="carousel-card"><img src="/static/img/title10.jpg" alt="Title 10"></div>
+                    <div class="carousel-card"><img src="/static/img/title1.jpg" alt="Title 1"></div>
+                    <div class="carousel-card"><img src="/static/img/title2.jpg" alt="Title 2"></div>
+                    <div class="carousel-card"><img src="/static/img/title3.jpg" alt="Title 3"></div>
+                    <div class="carousel-card"><img src="/static/img/title4.jpg" alt="Title 4"></div>
+                    <div class="carousel-card"><img src="/static/img/title5.jpg" alt="Title 5"></div>
+                    <div class="carousel-card"><img src="/static/img/title6.jpg" alt="Title 6"></div>
+                    <div class="carousel-card"><img src="/static/img/title7.jpg" alt="Title 7"></div>
+                    <div class="carousel-card"><img src="/static/img/title8.jpg" alt="Title 8"></div>
+                    <div class="carousel-card"><img src="/static/img/title9.jpg" alt="Title 9"></div>
+                    <div class="carousel-card"><img src="/static/img/title10.jpg" alt="Title 10"></div>
+                </div>
+                <!-- Botão para passar para a próxima imagem -->
+                
+            </div>
+        </div>
+    </main>
+    <script>
+        let currentIndex = 0;
+        const cards = document.querySelectorAll('.carousel.track-left .carousel-card');
+        const track = document.querySelector('.carousel.track-left .carousel-track');
+        
+
+        // Função para mover para a próxima imagem
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % cards.length; // Próximo índice, voltando ao início após a última imagem
+            const offset = currentIndex * cards[0].offsetWidth; // Deslocamento
+            track.style.transform = `translateX(-${offset}px)`; // Aplica o deslocamento
+        }
+
+     
+    </script>
+</body>
+<div class="plan-card">
+    <h3>Basic Plan</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur.</p>
+    <div class="price">
+        <span>$20.00</span> $15.00
+    </div>
+    <button>Get Started</button>
+</div>
+
+<div class="plan-card">
+    <h3>Standard Plan</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur.</p>
+    <div class="price">
+        <span>$40.00</span> $30.00
+    </div>
+    <button>Get Started</button>
+</div>
+
+<div class="plan-card">
+    <h3>Premium Plan</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur.</p>
+    <div class="price">
+        <span>$60.00</span> $45.00
+    </div>
+    <button>Get Started</button>
+</div>
+
+</html>
