@@ -64,25 +64,27 @@ header nav a {
     margin-bottom: 30px;
 }
 
-/* Carousel */
+/* Carousel (responsivo) */
 .carousel {
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 100%; /* Preenche a largura total da tela */
-    height: 400px; /* Mantém a proporção antiga */
+    width: 100%;
+    height: auto; /* altura adaptável */
+    padding: 20px 0;
 }
 
 .carousel-track {
     display: flex;
-    width: calc(300px * 10 * 3); /* Ajusta para 10 itens duplicados */
-    animation: scroll 50s linear infinite; /* Animação contínua */
+    gap: 10px;
+    transition: transform 0.5s ease;
+    will-change: transform;
 }
 
 .carousel-card {
     flex: 0 0 auto;
-    width: 300px; /* Largura de cada item */
-    height: 400px;
+    width: 220px; /* largura base para desktop */
+    height: 320px;
     margin: 0 10px;
 }
 
@@ -93,14 +95,24 @@ header nav a {
     border-radius: 10px;
 }
 
-/* Animação do carrossel */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-300px * 10)); /* Movimenta 10 itens */
-    }
+/* Responsividade */
+@media (max-width: 1024px) {
+    .carousel-card { width: 200px; height: 280px; }
+    .plan-card { width: 260px; }
+    header h1 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    .carousel-card { width: 45vw; height: 200px; margin: 0 6px; }
+    .carousel { padding: 12px 0; }
+    .plan-card { display: block; width: calc(100% - 40px); margin: 10px auto; }
+    header { padding: 30px 15px; }
+    header h1 { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+    .carousel-card { width: 80vw; height: 180px; }
+    header h1 { font-size: 1.2rem; }
 }
 
 /* Plans Section */
