@@ -4,10 +4,9 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any
 
 from scripts.utils.files import load_template, write_markdown
-
 
 _INVALID_CHARS_RE = re.compile(r"[^a-z0-9\-]+")
 
@@ -40,7 +39,7 @@ def create_weapon_page(
     impacto: str | None = None,
 ) -> Path:
     """Gerar página de arma a partir do template oficial."""
-    data: Dict[str, Any] = {
+    data: dict[str, Any] = {
         "nome": nome,
         "tipo": tipo,
         "funcao": funcao,

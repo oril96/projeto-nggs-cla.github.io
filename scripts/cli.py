@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Optional
+from typing import Annotated
 
 import typer
 
@@ -21,18 +21,28 @@ app.add_typer(calc_app, name="calc")
 
 @gen_app.command("weapon")
 def generate_weapon(
-    nome: str = typer.Option(..., "--nome", prompt=True, help="Nome da arma."),
-    tipo: str = typer.Option(..., "--tipo", prompt=True, help="Tipo da arma (AR, DMR, SMG...)."),
-    saida: Path = typer.Option(
-        Path("docs/pubg/armas"),
-        "--saida",
-        help="Diretório de saída para o arquivo gerado.",
-    ),
-    funcao: Optional[str] = typer.Option(None, help="Função da arma na composição."),
-    cano: Optional[str] = typer.Option(None, help="Anexo de cano preferido."),
-    empunhadura: Optional[str] = typer.Option(None, help="Empunhadura recomendada."),
-    municao: Optional[str] = typer.Option(None, help="Tipo de munição."),
-    otica: Optional[str] = typer.Option(None, help="Ótica recomendada."),
+    nome: Annotated[str, typer.Option("--nome", prompt=True, help="Nome da arma.")],
+    tipo: Annotated[
+        str,
+        typer.Option(
+            "--tipo",
+            prompt=True,
+            help="Tipo da arma (AR, DMR, SMG...).",
+        ),
+    ],
+    saida: Annotated[
+        Path,
+        typer.Option(
+            Path("docs/pubg/armas"),
+            "--saida",
+            help="Diretório de saída para o arquivo gerado.",
+        ),
+    ] = Path("docs/pubg/armas"),
+    funcao: Annotated[str | None, typer.Option(help="Função da arma na composição.")] = None,
+    cano: Annotated[str | None, typer.Option(help="Anexo de cano preferido.")] = None,
+    empunhadura: Annotated[str | None, typer.Option(help="Empunhadura recomendada.")] = None,
+    municao: Annotated[str | None, typer.Option(help="Tipo de munição.")] = None,
+    otica: Annotated[str | None, typer.Option(help="Ótica recomendada.")] = None,
 ) -> None:
     """Gerar arquivo Markdown de arma baseado no template oficial."""
     try:
@@ -54,19 +64,20 @@ def generate_weapon(
 
 @calc_app.command("edpi")
 def calculate_edpi(
-    dpi: float = typer.Option(..., "--dpi", prompt=True, help="DPI do mouse."),
-    sens: float = typer.Option(..., "--sens", prompt=True, help="Sensibilidade no jogo."),
-    saida: Path = typer.Option(
-        Path("docs/mouse/calculadora.md"),
-        "--saida",
-        help="Arquivo Markdown a ser atualizado.",
-    ),
-    yaw: float = typer.Option(
-        DEFAULT_PUBG_YAW,
-        "--yaw",
-        help="Yaw do jogo (padrão PUBG: 0.0025).",
-        show_default=True,
-    ),
+    dpi: Annotated[float, typer.Option("--dpi", prompt=True, help="DPI do mouse.")],
+    sens: Annotated[float, typer.Option("--sens", prompt=True, help="Sensibilidade no jogo.")],
+    saida: Annotated[
+        Path,
+        typer.Option("--saida", help="Arquivo Markdown a ser atualizado."),
+    ] = Path("docs/mouse/calculadora.md"),
+    yaw: Annotated[
+        float,
+        typer.Option(
+            "--yaw",
+            help="Yaw do jogo (padrão PUBG: 0.0025).",
+            show_default=True,
+        ),
+    ] = DEFAULT_PUBG_YAW,
 ) -> None:
     """Atualizar calculadora de eDPI e distância de 360°."""
     try:

@@ -1,5 +1,3 @@
-import math
-
 import pytest
 
 from scripts.utils.math import calc_360_distance_cm, calc_edpi
