@@ -8,7 +8,7 @@ from typing import Any
 
 from scripts.utils.files import load_template, write_markdown
 
-_INVALID_CHARS_RE = re.compile(r"[^a-z0-9\-]+")
+_INVALID_CHARS_RE = re.compile(r"[^a-z0-9\-.]+")
 
 
 def slugify(nome: str) -> str:

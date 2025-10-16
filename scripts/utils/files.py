@@ -41,5 +41,5 @@ def load_template(name: str) -> Template:
     """Obter template Jinja2 do diretório de templates."""
     try:
         return _ENV.get_template(name)
-    except Exception as exc:  # pragma: no cover - jinja2 já detalha o erro
+    except TemplateNotFound as exc:  # pragma: no cover - jinja2 já detalha o erro
         raise FileNotFoundError(f"Template '{name}' não encontrado") from exc

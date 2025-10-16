@@ -7,7 +7,7 @@ from scripts.generators.weapons import create_weapon_page, slugify
 
 def test_slugify_converts_name() -> None:
     assert slugify("Beryl M762") == "beryl-m762"
-    assert slugify("MK12 5.56") == "mk12-5-56"
+    assert slugify("MK12 5.56") == "mk12-5.56"
 
 
 def test_create_weapon_page_generates_file(tmp_path: Path) -> None:
