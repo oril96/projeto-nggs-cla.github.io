@@ -9,11 +9,20 @@ theme:
     - navigation.tracking
     - toc.integrate
     - content.code.copy
+  palette:
+    - scheme: slate
+      primary: black
+      accent: indigo
+  font:
+    text: "Montserrat"
+    code: "Fira Code"
 extra:
   social:
     - icon: fontawesome/brands/discord
       link: "#"
       name: "Discord (placeholder)"
+extra_css:
+  - assets/css/custom.css
 markdown_extensions:
   - admonition
   - attr_list
