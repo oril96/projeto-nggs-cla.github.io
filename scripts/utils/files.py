@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from jinja2 import Environment, FileSystemLoader, Template
+from jinja2 import Environment, FileSystemLoader, Template, TemplateNotFound
 
 _BASE_DIR = Path(__file__).resolve().parent.parent
 _TEMPLATES_DIR = _BASE_DIR / "templates"
