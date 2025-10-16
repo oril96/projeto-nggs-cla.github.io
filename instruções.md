@@ -13,7 +13,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-## 2. Validar qualidade do código
+## 2. Validar qualidade do código (backend + frontend)
 
 Execute as mesmas checagens usadas no CI para garantir que a branch está saudável:
 
@@ -23,6 +23,8 @@ black --check .
 isort --check-only .
 pytest -q
 ```
+
+- **Frontend**: após alterações visuais ou de JS, gere o build (`mkdocs build --strict`) e valide em `mkdocs serve` usando os breakpoints desktop (≥1280px) e mobile (≤480px). A calculadora eDPI deve manter 800x600 em monitores e responsividade plena em telas menores.
 
 Se algum comando apontar problema, corrija antes de prosseguir.
 
@@ -35,6 +37,8 @@ mkdocs build --strict
 ```
 
 O parâmetro `--strict` garante que qualquer erro de lint nos arquivos Markdown interrompa o build.
+
+> Após builds que envolvam a calculadora, confirme manualmente no preview se inputs, botões e gráficos respondem corretamente. Em caso de alterações na CLI, execute `nggs gen weapon` e `nggs calc edpi` para verificar se ainda geram arquivos dentro do padrão.
 
 ## 4. Visualizar em desenvolvimento
 
@@ -51,6 +55,7 @@ Acesse `http://127.0.0.1:8000` no navegador e pressione `Ctrl+C` para encerrar q
 1. Atualize ou gere conteúdo via CLI se necessário (`nggs gen weapon`, `nggs calc edpi`).  
 2. Rode os comandos dos passos 2 e 3.  
 3. Verifique se nenhum arquivo `.bak` permanece no repositório (eles são ignorados pelo `.gitignore`).  
-4. Faça commit apenas após tudo estar verde.
+4. Teste a página `PC > Otimizador CMD` para garantir que a tabela e o bloco `.bat` renderizam corretamente.  
+5. Faça commit apenas após tudo estar verde.
 
 Pronto! O mesmo pipeline é executado automaticamente no GitHub Actions ao abrir um PR ou fazer push na `main`.

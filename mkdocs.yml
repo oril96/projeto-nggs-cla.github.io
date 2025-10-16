@@ -19,10 +19,12 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/discord
-      link: "#"
-      name: "Discord (placeholder)"
+      link: https://discord.gg/SZF2H5w7ZG
+      name: "Comunidade no Discord"
 extra_css:
   - assets/css/custom.css
+extra_javascript:
+  - assets/js/custom.js
 markdown_extensions:
   - admonition
   - attr_list
@@ -40,6 +42,7 @@ nav:
       - Windows: pc/windows.md
       - Armazenamento: pc/storage.md
       - Rede: pc/rede.md
+      - Otimizador CMD: pc/comandos-cmd.md
   - GPU:
       - NVIDIA: gpu/nvidia.md
       - AMD: gpu/amd.md

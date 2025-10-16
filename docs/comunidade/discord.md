@@ -1,10 +1,8 @@
 # Entre no Discord da NGGS
 
-Participe da comunidade NGGS no Discord para treinar, encontrar squad e compartilhar ajustes de performance. O convite oficial será divulgado internamente; utilize o placeholder abaixo até que o link definitivo seja liberado.
+Participe da comunidade NGGS no Discord para treinar, encontrar um squad e compartilhar ajustes de performance.
 
-```markdown
-[🚀 Junte-se ao Discord](<!-- Substituir pelo convite oficial quando disponível -->)
-```
+<a href="https://discord.gg/SZF2H5w7ZG" target="_blank" class="md-button md-button--primary">🚀 Junte-se ao Discord</a>
 
 ## Regras essenciais
 
