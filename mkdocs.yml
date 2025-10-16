@@ -19,8 +19,8 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/discord
-      link: "#"
-      name: "Discord (placeholder)"
+      link: https://discord.gg/SZF2H5w7ZG
+      name: "Comunidade no Discord"
 extra_css:
   - assets/css/custom.css
 extra_javascript:

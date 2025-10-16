@@ -68,22 +68,27 @@
 <section class="nggs-section nggs-section--accent">
   <div class="nggs-split">
     <div>
-      <span class="nggs-section__eyebrow">CLI NGGS</span>
-      <h2>Automatize conteúdos com a nossa Typer CLI.</h2>
+      <span class="nggs-section__eyebrow">Suporte NGGS</span>
+      <h2>Conte com a nossa equipe para evoluir no PUBG.</h2>
       <p>
-        Gere páginas de armas e atualize a calculadora diretamente do terminal. O fluxo garante padronização e cria backup
-        automático antes de qualquer mudança, preservando a revisão de coaches e analistas.
+        Precisa de ajuda para otimizar o PC, configurar periféricos ou entender o meta atual? Nosso time está disponível
+        para orientações em áudio, análises de partidas e ajustes personalizados.
       </p>
-      <div class="nggs-cta-buttons">
-        <code>nggs gen weapon --nome "Beryl M762"</code>
-        <code>nggs calc edpi --dpi 800 --sens 1.2</code>
+      <div class="nggs-support">
+        <p><strong>Como funciona?</strong></p>
+        <ul>
+          <li>Solicite atendimento pelo Discord e informe seu objetivo (FPS, aim, tática).</li>
+          <li>Receba um plano de ação com ajustes recomendados e como revertê-los quando necessário.</li>
+          <li>Agende sessões adicionais para feedback contínuo até alcançar seu desempenho ideal.</li>
+        </ul>
+        <a class="md-button md-button--primary" href="comunidade/discord/">Quero orientação agora</a>
       </div>
     </div>
     <div class="nggs-showcase">
       <img src="assets/images/logo-4.png" alt="Símbolo NGGS azul flamejante" />
       <p>
-        A CLI valida dados com type hints, cria backups <span>(.bak)</span> e segue nossa política anti-cheat. Instale via
-        <strong>pip install -e .</strong> e mantenha o repositório limpo com lint automático.
+        Nosso suporte personalizado mantém o foco em configurações legítimas e respeito às regras. Você recebe dicas
+        práticas, checkpoints de reversão e acompanhamento direto dos coaches NGGS.
       </p>
     </div>
   </div>
@@ -108,7 +113,7 @@
     </article>
     <article>
       <h3>Referências oficiais</h3>
-      <p>Fontes verificadas de Microsoft, AMD, NVIDIA, Intel e Krafton. Sem hacks obscuros ou gambiarras.</p>
+      <p>Fontes da Microsoft, NVIDIA, AMD, Intel, Krafton e provedores confiáveis. Nada de gambiarras.</p>
     </article>
   </div>
 </section>

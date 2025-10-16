@@ -10,6 +10,7 @@
 - **Descrição:** mapeie caminhos seguros entre hotspots, priorizando terreno elevado e veículos.  
 - **Por que fazer:** antecipa posicionamento do time adversário e evita ser pego fora de cobertura.  
 - **Como reverter:** caso um trajeto esteja muito contestado, crie uma alternativa e documente no `_template-arma` ou planilha da equipe.  
+- **Como reverter:** caso um trajeto esteja muito contestado, crie uma alternativa e documente na planilha da equipe.  
 - **Impacto esperado:** maior taxa de sobrevivência até os círculos finais.
 
 ## Comunicação objetiva
