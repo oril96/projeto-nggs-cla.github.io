@@ -35,7 +35,7 @@ jobs:
           pip install -e .
 
       - name: Run Ruff
-        run: ruff --output-format=github .
+        run: ruff check --output-format=github .
 
       - name: Run Black
         run: black --check .
